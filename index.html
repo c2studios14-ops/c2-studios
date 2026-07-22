@@ -185,7 +185,7 @@
           <li><svg class="icon"><use href="#icon-check"></use></svg>Monthly performance report</li>
         </ul>
         <p class="pkg-goal">"Keep your business active and professional online."</p>
-        <a href="mailto:c2studios14@gmail.com?subject=Proposal%20Request%20-%20Starter%20Presence" class="btn btn-outline btn-block">Request a Proposal</a>
+        <a href="mailto:hello@csquaredstudios.ph?subject=Proposal%20Request%20-%20Starter%20Presence" class="btn btn-outline btn-block">Request a Proposal</a>
       </div>
 
       <div class="pkg-card is-popular">
@@ -204,7 +204,7 @@
           <li><svg class="icon"><use href="#icon-check"></use></svg>Monthly strategy review</li>
         </ul>
         <p class="pkg-goal">"Content customers actually want to watch."</p>
-        <a href="mailto:c2studios14@gmail.com?subject=Proposal%20Request%20-%20Growth%20Package" class="btn btn-primary btn-block">Request a Proposal</a>
+        <a href="mailto:hello@csquaredstudios.ph?subject=Proposal%20Request%20-%20Growth%20Package" class="btn btn-primary btn-block">Request a Proposal</a>
       </div>
 
       <div class="pkg-card">
@@ -222,7 +222,7 @@
           <li><svg class="icon"><use href="#icon-check"></use></svg>Priority support</li>
         </ul>
         <p class="pkg-goal">"Your outsourced creative department."</p>
-        <a href="mailto:c2studios14@gmail.com?subject=Proposal%20Request%20-%20Creative%20Partner" class="btn btn-outline btn-block">Request a Proposal</a>
+        <a href="mailto:hello@csquaredstudios.ph?subject=Proposal%20Request%20-%20Creative%20Partner" class="btn btn-outline btn-block">Request a Proposal</a>
       </div>
     </div>
   </div>
@@ -441,7 +441,7 @@
     <div class="final-ctas">
       <a href="#book" class="btn btn-primary">Book a Free Consultation</a>
       <a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener" class="btn btn-outline"><svg class="icon" style="width:16px;height:16px"><use href="#icon-fb"></use></svg>Message Us on Facebook</a>
-      <a href="mailto:c2studios14@gmail.com?subject=Custom%20Package%20Request" class="btn btn-outline">Request a Custom Package</a>
+      <a href="mailto:hello@csquaredstudios.ph?subject=Custom%20Package%20Request" class="btn btn-outline">Request a Custom Package</a>
     </div>
   </div>
 </section>
@@ -475,7 +475,7 @@
       <div class="footer-col">
         <h4>Get In Touch</h4>
         <ul>
-          <li><a href="mailto:c2studios14@gmail.com">c2studios14@gmail.com</a></li>
+          <li><a href="mailto:hello@csquaredstudios.ph">hello@csquaredstudios.ph</a></li>
           <li><a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook /csquaredstudios</a></li>
           <li><a href="#">Instagram @csquaredstudios</a></li>
         </ul>
@@ -644,18 +644,17 @@
     var submitBtn = document.getElementById('consultSubmitBtn');
     consultForm.addEventListener('submit', function(e){
       e.preventDefault();
-      if (GOOGLE_SCRIPT_URL.indexOf('https://script.google.com/macros/s/AKfycbyumBsKMFeXx98q8p6VvBzveVwdyBxOxJzocGkd2GnIz_3cjEWTytP4tTjYe2vir9kq/exec') === 0) {
+      if (GOOGLE_SCRIPT_URL.indexOf('PASTE_YOUR') === 0) {
         statusEl.textContent = 'Form not connected yet — add your Google Apps Script URL.';
         statusEl.className = 'form-status is-error';
         return;
       }
       submitBtn.disabled = true;
-      statusEl.textContent = 'Sending...';
+      statusEl.textContent = 'Sending your request...';
       statusEl.className = 'form-status';
       var formData = new FormData(consultForm);
       fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors',
         body: formData
       }).then(function(){
         statusEl.textContent = "Thanks! We'll be in touch within 1–2 business days.";
