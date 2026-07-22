@@ -653,19 +653,31 @@
       statusEl.textContent = 'Sending your request...';
       statusEl.className = 'form-status';
       var formData = new FormData(consultForm);
-      fetch(GOOGLE_SCRIPT_URL, {
-        method: 'POST',
-        body: formData
-      }).then(function(){
-        statusEl.textContent = "Thanks! We'll be in touch within 1–2 business days.";
-        statusEl.className = 'form-status is-success';
-        consultForm.reset();
-        submitBtn.disabled = false;
-      }).catch(function(){
-        statusEl.textContent = 'Something went wrong. Please try again or message us on Facebook.';
-        statusEl.className = 'form-status is-error';
-        submitBtn.disabled = false;
-      });
+     fetch(GOOGLE_SCRIPT_URL, {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(data)
+})
+.then(res => res.json())
+.then(result => {
+  console.log(result);
+
+  if(result.success){
+      statusEl.textContent = "Thanks! We'll be in touch within 1–2 business days.";
+      consultForm.reset();
+  }else{
+      statusEl.textContent = result.error;
+  }
+
+  submitBtn.disabled = false;
+})
+.catch(err=>{
+    console.error(err);
+    statusEl.textContent = "Submission failed.";
+    submitBtn.disabled = false;
+});
     });
   }
 
