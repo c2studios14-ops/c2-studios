@@ -636,81 +636,39 @@
     });
   });
   // Consultation form submission
-var consultForm = document.getElementById('consultForm');
+  var consultForm = document.getElementById('consultForm');
+  if (consultForm) {
+    var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyumBsKMFeXx98q8p6VvBzveVwdyBxOxJzocGkd2GnIz_3cjEWTytP4tTjYe2vir9kq/exec';
+    var statusEl = document.getElementById('consultStatus');
+    var submitBtn = document.getElementById('consultSubmitBtn');
 
-if (consultForm) {
+    consultForm.addEventListener('submit', function(e){
+      e.preventDefault();
 
-  var GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyumBsKMFeXx98q8p6VvBzveVwdyBxOxJzocGkd2GnIz_3cjEWTytP4tTjYe2vir9kq/exec';
+      submitBtn.disabled = true;
+      statusEl.textContent = 'Sending...';
+      statusEl.className = 'form-status';
 
-  var statusEl = document.getElementById('consultStatus');
-  var submitBtn = document.getElementById('consultSubmitBtn');
+      var formData = new FormData(consultForm);
 
-  consultForm.addEventListener('submit', async function(e){
-
-    e.preventDefault();
-
-    submitBtn.disabled = true;
-    statusEl.textContent = 'Sending your request...';
-    statusEl.className = 'form-status';
-
-    const data = {
-      name: consultForm.name.value,
-      business: consultForm.business.value,
-      email: consultForm.email.value,
-      phone: consultForm.phone.value,
-      package: consultForm.package.value,
-      message: consultForm.message.value
-    };
-
-    try{
-
-      const response = await fetch(GOOGLE_SCRIPT_URL,{
-        method:"POST",
-        headers:{
-          "Content-Type":"application/json"
-        },
-        body:JSON.stringify(data)
-      });
-
-      const result = await response.json();
-
-      if(result.success){
-
-        statusEl.textContent =
-        "Thanks! We'll be in touch within 1–2 business days.";
-
-        statusEl.className =
-        "form-status is-success";
-
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(){
+        statusEl.textContent = "Thanks! We'll be in touch within 1–2 business days.";
+        statusEl.className = 'form-status is-success';
         consultForm.reset();
-
-      }else{
-
-        statusEl.textContent =
-        result.error || "Submission failed.";
-
-        statusEl.className =
-        "form-status is-error";
-
-      }
-
-    }catch(err){
-
-      console.error(err);
-
-      statusEl.textContent =
-      "Submission failed. Please try again.";
-
-      statusEl.className =
-      "form-status is-error";
-
-    }
-
-    submitBtn.disabled = false;
-
-  });
-
-}
+      })
+      .catch(function(err){
+        console.error(err);
+        statusEl.textContent = 'Submission failed. Please try again.';
+        statusEl.className = 'form-status is-error';
+      })
+      .finally(function(){
+        submitBtn.disabled = false;
+      });
+    });
   }
 
 })();
