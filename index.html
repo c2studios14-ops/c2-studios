@@ -644,7 +644,7 @@
     var submitBtn = document.getElementById('consultSubmitBtn');
     consultForm.addEventListener('submit', function(e){
       e.preventDefault();
-      if (GOOGLE_SCRIPT_URL.indexOf('PASTE_YOUR') === 0) {
+      if (GOOGLE_SCRIPT_URL.indexOf('https://script.google.com/macros/s/AKfycbyumBsKMFeXx98q8p6VvBzveVwdyBxOxJzocGkd2GnIz_3cjEWTytP4tTjYe2vir9kq/exec') === 0) {
         statusEl.textContent = 'Form not connected yet — add your Google Apps Script URL.';
         statusEl.className = 'form-status is-error';
         return;
