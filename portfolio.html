@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — C² Studios</title>
+<meta name="description" content="Selected work from C² Studios — content production, photography, videography, and social media case studies for Philippine MSMEs.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ============ PORTFOLIO PAGE ONLY ============ */
+  .pf-hero{padding:clamp(150px,18vw,200px) 0 clamp(56px,7vw,80px);}
+  .pf-hero .eyebrow{margin-bottom:20px;}
+  .pf-hero h1{max-width:14ch;margin-bottom:24px;}
+  .pf-hero p.lead{max-width:520px;}
+
+  .pf-filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 48px;}
+  .pf-filter-btn{
+    font-family:var(--font-display);font-size:0.85rem;font-weight:600;
+    padding:10px 20px;border-radius:999px;border:1.5px solid var(--line-on-ink);
+    background:none;color:var(--stone);cursor:pointer;
+    transition:border-color .3s var(--ease),color .3s var(--ease),background-color .3s var(--ease);
+  }
+  .pf-filter-btn:hover{color:var(--paper);border-color:var(--paper);}
+  .pf-filter-btn.is-active{background:var(--signal);border-color:var(--signal);color:#fff;}
+
+  .pf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .pf-grid .project-card[hidden]{display:none;}
+
+  @media (max-width:1024px){
+    .pf-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:640px){
+    .pf-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG ICON SPRITE -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-x" viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><polyline points="4,13 9,18 20,6"/></symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></symbol>
+  <symbol id="icon-fb" viewBox="0 0 24 24"><path d="M15 8.5h2.5V5h-2.5C13 5 11.5 6.5 11.5 9v2.5H9V15h2.5v6H15v-6h2.3l.4-3.5H15V9c0-.3.2-.5.5-.5z"/></symbol>
+  <symbol id="icon-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6" fill="currentColor" stroke="none"/></symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a href="index.html#top" class="nav-logo" aria-label="C² Studios, back to home">
+      <img src="logo.png" alt="C² Studios logo" width="42" height="42">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html#services">Services</a>
+      <a href="portfolio.html" class="is-active">Work</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#packages">Packages</a>
+      <a href="index.html#faq">FAQ</a>
+    </nav>
+    <a href="index.html#book" class="btn btn-primary btn-sm nav-cta">Book a Call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="index.html#services">Services</a>
+    <a href="portfolio.html">Work</a>
+    <a href="index.html#process">Process</a>
+    <a href="index.html#packages">Packages</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="index.html#book" class="btn btn-primary nav-mobile-cta">Book a Call</a>
+  </div>
+</header>
+
+<!-- ============ PORTFOLIO HERO ============ -->
+<section class="hero bg-ink pf-hero">
+  <div class="hero-ghost" aria-hidden="true">C<span>2</span></div>
+  <div class="container hero-inner">
+    <p class="eyebrow reveal">Selected Work</p>
+    <h1 class="pf-hero-h reveal">Work That Speaks For Itself.</h1>
+    <p class="lead reveal">A look at how we've helped Philippine businesses show up online — one shoot, one campaign, one launch at a time.</p>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO GRID ============ -->
+<section class="section bg-ink" style="padding-top:0;">
+  <div class="container">
+    <div class="pf-filters reveal" role="tablist" aria-label="Filter portfolio by category">
+      <button class="pf-filter-btn is-active" data-filter="all">All</button>
+      <button class="pf-filter-btn" data-filter="content">Content &amp; Social</button>
+      <button class="pf-filter-btn" data-filter="video">Video</button>
+    </div>
+
+    <div class="pf-grid reveal-stagger">
+      <div class="project-card" data-project="offszn" data-category="content" role="button" tabindex="0" aria-label="View OFFSZN case study">
+        <div class="project-visual" style="background-image:url('images/offszn-1.jpg')"><span class="project-tag">Product Photography · Content</span></div>
+        <div class="project-body">
+          <h3>OFFSZN</h3>
+          <p class="project-tags">Photography, Content</p>
+          <span class="project-cta">View Case Study <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+      <div class="project-card" data-project="restaurant" data-category="content" role="button" tabindex="0" aria-label="View Restaurant case study">
+        <div class="project-visual project-visual-2"><span class="project-tag">Content Creation · Social Media</span></div>
+        <div class="project-body">
+          <h3>Local Restaurant</h3>
+          <p class="project-tags">Content, Social Media</p>
+          <span class="project-cta">View Case Study <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+      <div class="project-card" data-project="events" data-category="video" role="button" tabindex="0" aria-label="View Corporate Events case study">
+        <div class="project-visual project-visual-3"><span class="project-tag">Commercial Video · Event Coverage</span></div>
+        <div class="project-body">
+          <h3>Corporate Events</h3>
+          <p class="project-tags">Video, Event Coverage</p>
+          <span class="project-cta">View Case Study <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+      <!--
+        Add more projects here as you take on clients — copy a .project-card block above,
+        give it a unique data-project value, set data-category to "content" or "video"
+        (or add a new filter button + category), and add a matching <template> below
+        with the case study details.
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- Hidden case study content templates -->
+<template id="project-offszn-tpl">
+  <p class="modal-tags">Product Photography · Content</p>
+  <h3>OFFSZN</h3>
+  <div class="modal-gallery">
+    <img src="images/offszn-1.jpg" alt="OFFSZN apparel product photography, pink hoodie flat lay">
+    <img src="images/offszn-2.jpg" alt="OFFSZN apparel lifestyle photography, streetwear graphic tee">
+  </div>
+  <div class="modal-block"><h4>Challenge</h4><p>An independent streetwear label needed product and lifestyle photography that matched the premium feel of the clothing itself.</p></div>
+  <div class="modal-block"><h4>Solution</h4><p>We shot a mix of clean product flat lays and on-location lifestyle photography to show the pieces both in detail and in context.</p></div>
+  <div class="modal-block"><h4>Creative Output</h4><p>Product photography, lifestyle shoots, social-ready content.</p></div>
+  <div class="modal-block"><h4>Results</h4><p>A consistent library of scroll-stopping content the brand could use across its drops and social channels.</p></div>
+</template>
+<template id="project-restaurant-tpl">
+  <p class="modal-tags">Content Creation · Social Media</p>
+  <h3>Local Restaurant</h3>
+  <div class="modal-block"><h4>Challenge</h4><p>A family-run restaurant had great food but inconsistent, infrequent social posts that didn't reflect the quality of the dining experience.</p></div>
+  <div class="modal-block"><h4>Solution</h4><p>We introduced a monthly content shoot and planning system, turning each visit into a full month of scroll-stopping posts and stories.</p></div>
+  <div class="modal-block"><h4>Creative Output</h4><p>Monthly food photography, Reels, caption writing, content calendar.</p></div>
+  <div class="modal-block"><h4>Results</h4><p>A steady stream of professional content and a noticeably more active, consistent social presence.</p></div>
+</template>
+<template id="project-events-tpl">
+  <p class="modal-tags">Commercial Video · Event Coverage</p>
+  <h3>Corporate Events</h3>
+  <div class="modal-block"><h4>Challenge</h4><p>A corporate client needed professional coverage of a major company event, with no in-house video or photography team of their own.</p></div>
+  <div class="modal-block"><h4>Solution</h4><p>We handled full event coverage — from planning the shot list to filming and editing a polished highlight reel.</p></div>
+  <div class="modal-block"><h4>Creative Output</h4><p>Event photography, videography, a commercial highlight reel.</p></div>
+  <div class="modal-block"><h4>Results</h4><p>A professional record of the event, ready to share across their website and social channels.</p></div>
+</template>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="section bg-ink final-cta" style="background:var(--slate-2)">
+  <div class="hero-ghost" aria-hidden="true">C<span>2</span></div>
+  <div class="container final-cta-inner reveal">
+    <h2>Like What You See?</h2>
+    <p class="lead">Let's talk about what a month of consistent, professional content could look like for your business.</p>
+    <div class="final-ctas">
+      <a href="index.html#book" class="btn btn-primary">Book a Free Consultation</a>
+      <a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener" class="btn btn-outline"><svg class="icon" style="width:16px;height:16px"><use href="#icon-fb"></use></svg>Message Us on Facebook</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer bg-ink">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="C² Studios logo">
+        <p>Your outsourced creative team — content production and social media for growing Philippine businesses.</p>
+        <span class="footer-tag">Philippines</span>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="index.html#process">Process</a></li>
+          <li><a href="index.html#packages">Packages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="index.html#faq">FAQ</a></li>
+          <li><a href="index.html#book">Contact</a></li>
+          <li><a href="index.html#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><a href="mailto:hello@csquaredstudios.ph">hello@csquaredstudios.ph</a></li>
+          <li><a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook /csquaredstudios</a></li>
+          <li><a href="#">Instagram @csquaredstudios</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> C² Studios. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" style="width:16px;height:16px"><use href="#icon-fb"></use></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="icon" style="width:16px;height:16px"><use href="#icon-ig"></use></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalContent">
+    <button class="modal-close" id="modalClose" aria-label="Close case study"><svg class="icon"><use href="#icon-x"></use></svg></button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  var nav = document.getElementById('siteNav');
+  function onScroll(){
+    if(window.scrollY > 40){ nav.classList.add('is-scrolled'); }
+    else { nav.classList.remove('is-scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  var toggle = document.getElementById('navToggle');
+  var mobile = document.getElementById('navMobile');
+  toggle.addEventListener('click', function(){
+    var open = mobile.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('no-scroll', open);
+  });
+  document.querySelectorAll('#navMobile a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobile.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+      document.body.classList.remove('no-scroll');
+    });
+  });
+
+  if('IntersectionObserver' in window){
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15});
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){
+      el.classList.add('is-visible');
+    });
+  }
+
+  // Portfolio modal
+  var modalBackdrop = document.getElementById('modalBackdrop');
+  var modalContent = document.getElementById('modalContent');
+  var modalClose = document.getElementById('modalClose');
+
+  function openModal(id){
+    var tpl = document.getElementById('project-' + id + '-tpl');
+    if(!tpl) return;
+    modalContent.innerHTML = '';
+    modalContent.appendChild(tpl.content.cloneNode(true));
+    modalBackdrop.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+  }
+  function closeModal(){
+    modalBackdrop.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+  }
+  document.querySelectorAll('[data-project]').forEach(function(card){
+    card.addEventListener('click', function(){ openModal(card.getAttribute('data-project')); });
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        openModal(card.getAttribute('data-project'));
+      }
+    });
+  });
+  modalClose.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', function(e){
+    if(e.target === modalBackdrop) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+
+  // Filter tabs
+  var filterBtns = document.querySelectorAll('.pf-filter-btn');
+  var cards = document.querySelectorAll('.pf-grid .project-card');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      filterBtns.forEach(function(b){ b.classList.remove('is-active'); });
+      btn.classList.add('is-active');
+      var filter = btn.getAttribute('data-filter');
+      cards.forEach(function(card){
+        var match = filter === 'all' || card.getAttribute('data-category') === filter;
+        card.hidden = !match;
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>

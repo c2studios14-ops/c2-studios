@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>C² Studios — Your Outsourced Creative Team</title>
+<meta name="description" content="C² Studios helps Philippine MSMEs build a stronger online presence through content production, social media, and web — all in one flexible creative partnership.">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- SVG ICON SPRITE -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-x" viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24"><polyline points="4,13 9,18 20,6"/></symbol>
+  <symbol id="icon-plus" viewBox="0 0 24 24"><line x1="12" y1="4" x2="12" y2="20"/><line x1="4" y1="12" x2="20" y2="12"/></symbol>
+  <symbol id="icon-brand" viewBox="0 0 32 32"><circle cx="12" cy="16" r="8"/><circle cx="20" cy="16" r="8"/></symbol>
+  <symbol id="icon-camera" viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="17" rx="2"/><circle cx="16" cy="18.5" r="6"/><rect x="11" y="6" width="8" height="4" rx="1"/></symbol>
+  <symbol id="icon-social" viewBox="0 0 32 32"><circle cx="7" cy="16" r="3"/><circle cx="25" cy="7" r="3"/><circle cx="25" cy="25" r="3"/><line x1="9.6" y1="14.6" x2="22.4" y2="8.6"/><line x1="9.6" y1="17.4" x2="22.4" y2="23.4"/></symbol>
+  <symbol id="icon-digital" viewBox="0 0 32 32"><rect x="4" y="6" width="24" height="20" rx="2"/><line x1="4" y1="12" x2="28" y2="12"/><circle cx="7.5" cy="9" r="0.9" fill="currentColor" stroke="none"/><circle cx="10.5" cy="9" r="0.9" fill="currentColor" stroke="none"/><circle cx="13.5" cy="9" r="0.9" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24"><line x1="4" y1="12" x2="19" y2="12"/><polyline points="12,5 19,12 12,19"/></symbol>
+  <symbol id="icon-fb" viewBox="0 0 24 24"><path d="M15 8.5h2.5V5h-2.5C13 5 11.5 6.5 11.5 9v2.5H9V15h2.5v6H15v-6h2.3l.4-3.5H15V9c0-.3.2-.5.5-.5z"/></symbol>
+  <symbol id="icon-ig" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.6" fill="currentColor" stroke="none"/></symbol>
+</svg>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="siteNav">
+  <div class="container nav-inner">
+    <a href="#top" class="nav-logo" aria-label="C² Studios, back to top">
+      <img src="logo.png" alt="C² Studios logo" width="42" height="42">
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#services" data-nav-link data-target="services">Services</a>
+      <a href="portfolio.html" data-nav-link>Work</a>
+      <a href="#process" data-nav-link data-target="process">Process</a>
+      <a href="#packages" data-nav-link data-target="packages">Packages</a>
+      <a href="#faq" data-nav-link data-target="faq">FAQ</a>
+    </nav>
+    <a href="#book" class="btn btn-primary btn-sm nav-cta">Book a Call</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="#services" data-nav-link>Services</a>
+    <a href="portfolio.html" data-nav-link>Work</a>
+    <a href="#process" data-nav-link>Process</a>
+    <a href="#packages" data-nav-link>Packages</a>
+    <a href="#faq" data-nav-link>FAQ</a>
+    <a href="#book" class="btn btn-primary nav-mobile-cta">Book a Call</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero bg-ink" id="top">
+  <div class="hero-ghost" aria-hidden="true">C<span>2</span></div>
+  <div class="container hero-inner">
+    <p class="eyebrow reveal">Creative Partner for Philippine MSMEs</p>
+    <h1 class="hero-headline reveal">Your Outsourced<br>Creative Team.</h1>
+    <div class="hero-row reveal">
+      <p class="hero-sub">Content, photography, and social media — all in one flexible monthly partnership built for growing businesses.</p>
+      <div class="hero-ctas">
+        <a href="#book" class="btn btn-primary">Book a Free Discovery Call</a>
+        <a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener" class="btn btn-outline"><svg class="icon" style="width:16px;height:16px"><use href="#icon-fb"></use></svg>Message Us on Facebook</a>
+      </div>
+    </div>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Content Production</span><span class="dot">✦</span><span>Social Media</span><span class="dot">✦</span><span>Digital</span><span class="dot">✦</span>
+      <span>Content Production</span><span class="dot">✦</span><span>Social Media</span><span class="dot">✦</span><span>Digital</span><span class="dot">✦</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEM ============ -->
+<section class="section bg-ink" id="problem">
+  <div class="container narrow">
+    <p class="eyebrow reveal">The Problem</p>
+    <h2 class="reveal">Growing your business is already hard.<br>Creating content shouldn't be.</h2>
+    <ul class="problem-list reveal-stagger">
+      <li><svg class="icon"><use href="#icon-x"></use></svg>You're too busy running the business to plan content.</li>
+      <li><svg class="icon"><use href="#icon-x"></use></svg>Your visuals look different on every platform.</li>
+      <li><svg class="icon"><use href="#icon-x"></use></svg>You're juggling separate freelancers for every task.</li>
+      <li><svg class="icon"><use href="#icon-x"></use></svg>You're not sure what content actually brings in customers.</li>
+    </ul>
+    <p class="problem-resolve reveal">You don't need more freelancers. You need <strong>one creative partner.</strong></p>
+  </div>
+</section>
+
+<!-- ============ SOLUTION / PILLARS ============ -->
+<section class="section bg-paper" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" style="color:var(--char)">The Solution</p>
+      <h2>Everything Your Business Needs to Grow Online.</h2>
+    </div>
+    <div class="pillars-grid reveal-stagger">
+      <div class="pillar-card">
+        <div class="pillar-icon"><svg class="icon"><use href="#icon-camera"></use></svg></div>
+        <h3>Content Production</h3>
+        <ul class="pillar-list">
+          <li>Photography</li><li>Videography</li><li>Product Shoots</li><li>Reels</li>
+        </ul>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><svg class="icon"><use href="#icon-social"></use></svg></div>
+        <h3>Social Media</h3>
+        <ul class="pillar-list">
+          <li>Monthly Content Planning</li><li>Creative Designs</li><li>Caption Writing</li><li>Facebook, Instagram &amp; TikTok</li><li>Scheduling &amp; Reporting</li>
+        </ul>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon"><svg class="icon"><use href="#icon-digital"></use></svg></div>
+        <h3>Digital</h3>
+        <ul class="pillar-list">
+          <li>Meta Ads Creatives</li><li>Campaign Assets</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="section bg-ink" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Why C² Studios</p>
+      <h2>More Than a Social Media Manager.</h2>
+      <p class="lead" style="margin-top:20px;">Instead of hiring a designer, photographer, video editor, and social media manager separately — you get one creative partner who handles it all.</p>
+    </div>
+
+    <div class="compare-wrap reveal">
+      <div class="compare-old">
+        <div class="old-role"><div><div class="old-role-name">Graphic Designer</div><div class="old-role-desc">for social graphics</div></div><svg class="icon" style="color:var(--stone)"><use href="#icon-x"></use></svg></div>
+        <div class="old-role"><div><div class="old-role-name">Photographer</div><div class="old-role-desc">for product shoots</div></div><svg class="icon" style="color:var(--stone)"><use href="#icon-x"></use></svg></div>
+        <div class="old-role"><div><div class="old-role-name">Video Editor</div><div class="old-role-desc">for reels &amp; ads</div></div><svg class="icon" style="color:var(--stone)"><use href="#icon-x"></use></svg></div>
+        <div class="old-role"><div><div class="old-role-name">Social Media Manager</div><div class="old-role-desc">for posting &amp; captions</div></div><svg class="icon" style="color:var(--stone)"><use href="#icon-x"></use></svg></div>
+      </div>
+      <div class="compare-new">
+        <span class="compare-new-badge">C² Studios</span>
+        <h3>One Creative Partner.</h3>
+        <p>Content, photography, video, social media, and web — under one roof, one point of contact, one invoice.</p>
+      </div>
+    </div>
+
+    <div class="advantages-grid reveal-stagger">
+      <div class="advantage-item"><svg class="icon"><use href="#icon-check"></use></svg>Consistent Content Quality</div>
+      <div class="advantage-item"><svg class="icon"><use href="#icon-check"></use></svg>Professional Visuals</div>
+      <div class="advantage-item"><svg class="icon"><use href="#icon-check"></use></svg>Faster Communication</div>
+      <div class="advantage-item"><svg class="icon"><use href="#icon-check"></use></svg>Flexible Packages</div>
+      <div class="advantage-item"><svg class="icon"><use href="#icon-check"></use></svg>Monthly Planning</div>
+      <div class="advantage-item"><svg class="icon"><use href="#icon-check"></use></svg>Creative Strategy</div>
+      <div class="advantage-item"><svg class="icon"><use href="#icon-check"></use></svg>Reliable Execution</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PACKAGES ============ -->
+<section class="section bg-ink" id="packages" style="background:var(--slate-2)">
+  <div class="container">
+    <div class="section-head center reveal" style="margin-left:auto;margin-right:auto;">
+      <p class="eyebrow">Packages</p>
+      <h2>Flexible Packages For Every Stage.</h2>
+      <p class="lead" style="margin-top:20px;">No hidden pricing. Every business is different — request a proposal and we'll tailor the right fit for you.</p>
+    </div>
+
+    <div class="pkg-grid reveal-stagger">
+      <div class="pkg-card">
+        <div class="pkg-head">
+          <h3>Starter Presence</h3>
+          <p class="pkg-tagline">Perfect for businesses beginning their online journey.</p>
+        </div>
+        <ul class="pkg-features">
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Content planning</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>16–20 branded creatives per month</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Caption writing</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Facebook &amp; Instagram management</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Monthly content calendar</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Monthly performance report</li>
+        </ul>
+        <p class="pkg-goal">"Keep your business active and professional online."</p>
+        <a href="mailto:hello@csquaredstudios.ph?subject=Proposal%20Request%20-%20Starter%20Presence" class="btn btn-outline btn-block">Request a Proposal</a>
+      </div>
+
+      <div class="pkg-card is-popular">
+        <span class="pkg-badge">Most Popular</span>
+        <div class="pkg-head">
+          <h3>Growth Package</h3>
+          <p class="pkg-tagline">For businesses ready to level up their content.</p>
+        </div>
+        <p class="pkg-includes-note">Everything in Starter, plus:</p>
+        <ul class="pkg-features">
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Monthly on-site content shoot</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Professional product photography</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Short-form Reels</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Stories</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Creative campaign graphics</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Monthly strategy review</li>
+        </ul>
+        <p class="pkg-goal">"Content customers actually want to watch."</p>
+        <a href="mailto:hello@csquaredstudios.ph?subject=Proposal%20Request%20-%20Growth%20Package" class="btn btn-primary btn-block">Request a Proposal</a>
+      </div>
+
+      <div class="pkg-card">
+        <div class="pkg-head">
+          <h3>Creative Partner</h3>
+          <p class="pkg-tagline">Best for growing businesses ready to scale.</p>
+        </div>
+        <ul class="pkg-features">
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Multiple content shoots</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Commercial photography</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Reels &amp; campaign planning</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Seasonal promotions</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Meta Ads creatives</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Quarterly content strategy</li>
+          <li><svg class="icon"><use href="#icon-check"></use></svg>Priority support</li>
+        </ul>
+        <p class="pkg-goal">"Your outsourced creative department."</p>
+        <a href="mailto:hello@csquaredstudios.ph?subject=Proposal%20Request%20-%20Creative%20Partner" class="btn btn-outline btn-block">Request a Proposal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section bg-paper" id="process">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" style="color:var(--char)">How We Work</p>
+      <h2>A Simple Creative Process.</h2>
+    </div>
+    <div class="process-track reveal-stagger">
+      <div class="process-step"><div class="process-num">01</div><h3>Discovery</h3><p>We learn about your business, your goals, and your audience.</p></div>
+      <div class="process-step"><div class="process-num">02</div><h3>Strategy</h3><p>We map out a content and creative plan built around your brand.</p></div>
+      <div class="process-step"><div class="process-num">03</div><h3>Create</h3><p>Photography, design, and video — brought to life.</p></div>
+      <div class="process-step"><div class="process-num">04</div><h3>Launch</h3><p>We publish and deliver your content, right on schedule.</p></div>
+      <div class="process-step"><div class="process-num">05</div><h3>Grow</h3><p>We review results and refine the strategy, every month.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="section bg-ink" id="work">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow">Selected Work</p>
+      <h2>Work That Speaks For Itself.</h2>
+    </div>
+    <div class="portfolio-grid reveal-stagger">
+      <div class="project-card" data-project="offszn" role="button" tabindex="0" aria-label="View OFFSZN case study">
+        <div class="project-visual" style="background-image:url('images/offszn-1.jpg')"><span class="project-tag">Product Photography · Content</span></div>
+        <div class="project-body">
+          <h3>OFFSZN</h3>
+          <p class="project-tags">Photography, Content</p>
+          <span class="project-cta">View Case Study <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+      <div class="project-card" data-project="restaurant" role="button" tabindex="0" aria-label="View Restaurant case study">
+        <div class="project-visual project-visual-2"><span class="project-tag">Content Creation · Social Media</span></div>
+        <div class="project-body">
+          <h3>Local Restaurant</h3>
+          <p class="project-tags">Content, Social Media</p>
+          <span class="project-cta">View Case Study <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+      <div class="project-card" data-project="events" role="button" tabindex="0" aria-label="View Corporate Events case study">
+        <div class="project-visual project-visual-3"><span class="project-tag">Commercial Video · Event Coverage</span></div>
+        <div class="project-body">
+          <h3>Corporate Events</h3>
+          <p class="project-tags">Video, Event Coverage</p>
+          <span class="project-cta">View Case Study <svg class="icon"><use href="#icon-arrow"></use></svg></span>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:44px;text-align:center;">
+      <a href="portfolio.html" class="btn btn-outline">View Full Portfolio</a>
+    </div>
+  </div>
+</section>
+
+<!-- Hidden case study content templates -->
+<template id="project-offszn-tpl">
+  <p class="modal-tags">Product Photography · Content</p>
+  <h3>OFFSZN</h3>
+  <div class="modal-gallery">
+    <img src="images/offszn-1.jpg" alt="OFFSZN apparel product photography, pink hoodie flat lay">
+    <img src="images/offszn-2.jpg" alt="OFFSZN apparel lifestyle photography, streetwear graphic tee">
+  </div>
+  <div class="modal-block"><h4>Challenge</h4><p>An independent streetwear label needed product and lifestyle photography that matched the premium feel of the clothing itself.</p></div>
+  <div class="modal-block"><h4>Solution</h4><p>We shot a mix of clean product flat lays and on-location lifestyle photography to show the pieces both in detail and in context.</p></div>
+  <div class="modal-block"><h4>Creative Output</h4><p>Product photography, lifestyle shoots, social-ready content.</p></div>
+  <div class="modal-block"><h4>Results</h4><p>A consistent library of scroll-stopping content the brand could use across its drops and social channels.</p></div>
+</template>
+<template id="project-restaurant-tpl">
+  <p class="modal-tags">Content Creation · Social Media</p>
+  <h3>Local Restaurant</h3>
+  <div class="modal-block"><h4>Challenge</h4><p>A family-run restaurant had great food but inconsistent, infrequent social posts that didn't reflect the quality of the dining experience.</p></div>
+  <div class="modal-block"><h4>Solution</h4><p>We introduced a monthly content shoot and planning system, turning each visit into a full month of scroll-stopping posts and stories.</p></div>
+  <div class="modal-block"><h4>Creative Output</h4><p>Monthly food photography, Reels, caption writing, content calendar.</p></div>
+  <div class="modal-block"><h4>Results</h4><p>A steady stream of professional content and a noticeably more active, consistent social presence.</p></div>
+</template>
+<template id="project-events-tpl">
+  <p class="modal-tags">Commercial Video · Event Coverage</p>
+  <h3>Corporate Events</h3>
+  <div class="modal-block"><h4>Challenge</h4><p>A corporate client needed professional coverage of a major company event, with no in-house video or photography team of their own.</p></div>
+  <div class="modal-block"><h4>Solution</h4><p>We handled full event coverage — from planning the shot list to filming and editing a polished highlight reel.</p></div>
+  <div class="modal-block"><h4>Creative Output</h4><p>Event photography, videography, a commercial highlight reel.</p></div>
+  <div class="modal-block"><h4>Results</h4><p>A professional record of the event, ready to share across their website and social channels.</p></div>
+</template>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="section bg-paper" id="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" style="color:var(--char)">In Their Words</p>
+      <h2>What Partnership Sounds Like.</h2>
+    </div>
+    <div class="testi-grid reveal-stagger">
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">C² Studios completely transformed our social media.</p>
+        <p class="testi-author">Retail Business Owner</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">Our business finally looks professional online.</p>
+        <p class="testi-author">Restaurant Owner</p>
+      </div>
+      <div class="testi-card">
+        <div class="testi-mark">"</div>
+        <p class="testi-quote">They feel like part of our team.</p>
+        <p class="testi-author">Founder, Home &amp; Living Brand</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section bg-ink" id="faq">
+  <div class="container narrow">
+    <div class="section-head reveal">
+      <p class="eyebrow">Common Questions</p>
+      <h2>Questions, Answered.</h2>
+    </div>
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false"><h3>How does monthly content work?</h3><svg class="icon faq-icon"><use href="#icon-plus"></use></svg></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><p>Each month, we plan, create, and publish content based on your package — from social posts to photography and video. You approve the plan, we handle the rest.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false"><h3>Do you visit our location?</h3><svg class="icon faq-icon"><use href="#icon-plus"></use></svg></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><p>Yes. Content shoots and select services happen on-site, depending on your package.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false"><h3>Can we customize a package?</h3><svg class="icon faq-icon"><use href="#icon-plus"></use></svg></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><p>Always. Every business is different, so we tailor each package around your goals and budget.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false"><h3>Can you manage multiple branches?</h3><svg class="icon faq-icon"><use href="#icon-plus"></use></svg></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><p>Yes — we keep your content consistent across every location you manage.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false"><h3>Can you help even if we're just starting?</h3><svg class="icon faq-icon"><use href="#icon-plus"></use></svg></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><p>Definitely. Our Starter Presence package is built for businesses just beginning their online journey.</p></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-trigger" aria-expanded="false"><h3>How long is the contract?</h3><svg class="icon faq-icon"><use href="#icon-plus"></use></svg></button>
+        <div class="faq-panel"><div class="faq-panel-inner"><p>Our partnerships run month-to-month, with no long-term lock-in required.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOK A CONSULTATION ============ -->
+<section class="section bg-paper" id="book">
+  <div class="container">
+    <div class="section-head reveal">
+      <p class="eyebrow" style="color:var(--char)">Book a Consultation</p>
+      <h2>Tell Us About Your Business.</h2>
+      <p class="lead" style="margin-top:20px;">Fill out the form and we'll get back to you within 1–2 business days to schedule your free discovery call.</p>
+    </div>
+    <form class="book-form reveal" id="consultForm">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fName">Full Name</label>
+          <input type="text" id="fName" name="name" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="fBusiness">Business Name</label>
+          <input type="text" id="fBusiness" name="business" required autocomplete="organization">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fEmail">Email</label>
+          <input type="email" id="fEmail" name="email" required autocomplete="email">
+        </div>
+        <div class="form-field">
+          <label for="fPhone">Phone Number</label>
+          <input type="tel" id="fPhone" name="phone" autocomplete="tel">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field full">
+          <label for="fPackage">Which package are you interested in?</label>
+          <select id="fPackage" name="package">
+            <option value="Not sure yet">Not sure yet</option>
+            <option value="Starter Presence">Starter Presence</option>
+            <option value="Growth Package">Growth Package</option>
+            <option value="Creative Partner">Creative Partner</option>
+            <option value="Custom Package">Custom Package</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-field full">
+          <label for="fMessage">Tell us a bit about your business and goals</label>
+          <textarea id="fMessage" name="message" rows="4"></textarea>
+        </div>
+      </div>
+      <div class="form-submit-row">
+        <button type="submit" class="btn btn-primary" id="consultSubmitBtn">Request Consultation</button>
+        <span class="form-status" id="consultStatus"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="section bg-ink final-cta" id="contact">
+  <div class="hero-ghost" aria-hidden="true">C<span>2</span></div>
+  <div class="container final-cta-inner reveal">
+    <h2>Let's Build Your Business Together.</h2>
+    <p class="lead">Whether you're launching a new brand or growing an established one, C² Studios is ready to become your creative partner.</p>
+    <div class="final-ctas">
+      <a href="#book" class="btn btn-primary">Book a Free Consultation</a>
+      <a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener" class="btn btn-outline"><svg class="icon" style="width:16px;height:16px"><use href="#icon-fb"></use></svg>Message Us on Facebook</a>
+      <a href="mailto:hello@csquaredstudios.ph?subject=Custom%20Package%20Request" class="btn btn-outline">Request a Custom Package</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer bg-ink">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="C² Studios logo">
+        <p>Your outsourced creative team — content production and social media for growing Philippine businesses.</p>
+        <span class="footer-tag">Philippines</span>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#packages">Packages</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#book">Contact</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Get In Touch</h4>
+        <ul>
+          <li><a href="mailto:hello@csquaredstudios.ph">hello@csquaredstudios.ph</a></li>
+          <li><a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener">Facebook /csquaredstudios</a></li>
+          <li><a href="#">Instagram @csquaredstudios</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> C² Studios. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://www.facebook.com/share/14o7Y7Mvsyy/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" style="width:16px;height:16px"><use href="#icon-fb"></use></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="icon" style="width:16px;height:16px"><use href="#icon-ig"></use></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ MODAL ============ -->
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalContent">
+    <button class="modal-close" id="modalClose" aria-label="Close case study"><svg class="icon"><use href="#icon-x"></use></svg></button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  // Footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Nav scroll state
+  var nav = document.getElementById('siteNav');
+  function onScroll(){
+    if(window.scrollY > 40){ nav.classList.add('is-scrolled'); }
+    else { nav.classList.remove('is-scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // Mobile nav toggle
+  var toggle = document.getElementById('navToggle');
+  var mobile = document.getElementById('navMobile');
+  toggle.addEventListener('click', function(){
+    var open = mobile.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.classList.toggle('no-scroll', open);
+  });
+  document.querySelectorAll('#navMobile a').forEach(function(a){
+    a.addEventListener('click', function(){
+      mobile.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+      document.body.classList.remove('no-scroll');
+    });
+  });
+
+  // Active nav link highlighting
+  var navLinks = document.querySelectorAll('[data-nav-link]');
+  var sections = ['services','why','packages','process','work','testimonials','faq'];
+  var sectionEls = sections.map(function(id){ return document.getElementById(id); }).filter(Boolean);
+  if('IntersectionObserver' in window){
+    var navObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          var id = entry.target.id;
+          navLinks.forEach(function(link){
+            link.classList.toggle('is-active', link.getAttribute('data-target') === id);
+          });
+        }
+      });
+    }, {rootMargin:'-45% 0px -45% 0px'});
+    sectionEls.forEach(function(el){ navObserver.observe(el); });
+  }
+
+  // Scroll reveal
+  if('IntersectionObserver' in window){
+    var revealObserver = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, {threshold:0.15});
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){
+      revealObserver.observe(el);
+    });
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(function(el){
+      el.classList.add('is-visible');
+    });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var trigger = item.querySelector('.faq-trigger');
+    var panel = item.querySelector('.faq-panel');
+    trigger.addEventListener('click', function(){
+      var isOpen = item.classList.contains('is-open');
+      document.querySelectorAll('.faq-item.is-open').forEach(function(other){
+        if(other !== item){
+          other.classList.remove('is-open');
+          other.querySelector('.faq-trigger').setAttribute('aria-expanded','false');
+          other.querySelector('.faq-panel').style.maxHeight = null;
+        }
+      });
+      if(isOpen){
+        item.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded','false');
+        panel.style.maxHeight = null;
+      } else {
+        item.classList.add('is-open');
+        trigger.setAttribute('aria-expanded','true');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+
+  // Portfolio modal
+  var modalBackdrop = document.getElementById('modalBackdrop');
+  var modalContent = document.getElementById('modalContent');
+  var modalClose = document.getElementById('modalClose');
+
+  function openModal(id){
+    var tpl = document.getElementById('project-' + id + '-tpl');
+    if(!tpl) return;
+    modalContent.innerHTML = '';
+    modalContent.appendChild(tpl.content.cloneNode(true));
+    modalBackdrop.classList.add('is-open');
+    document.body.classList.add('no-scroll');
+  }
+  function closeModal(){
+    modalBackdrop.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+  }
+  document.querySelectorAll('[data-project]').forEach(function(card){
+    card.addEventListener('click', function(){ openModal(card.getAttribute('data-project')); });
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){
+        e.preventDefault();
+        openModal(card.getAttribute('data-project'));
+      }
+    });
+  });
+  modalClose.addEventListener('click', closeModal);
+  modalBackdrop.addEventListener('click', function(e){
+    if(e.target === modalBackdrop) closeModal();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+
+  // Add corner brackets to bracket-frame elements (none currently required but kept for future use)
+  document.querySelectorAll('.bracket-frame').forEach(function(el){
+    ['bkt-tl','bkt-tr','bkt-bl','bkt-br'].forEach(function(cls){
+      var s = document.createElement('span');
+      s.className = 'bkt ' + cls;
+      el.appendChild(s);
+    });
+  });
+  // Consultation form submission
+  var consultForm = document.getElementById('consultForm');
+  if (consultForm) {
+    // TODO: Replace with your Google Apps Script Web App URL (see setup instructions).
+    var GOOGLE_SCRIPT_URL = 'PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+    var statusEl = document.getElementById('consultStatus');
+    var submitBtn = document.getElementById('consultSubmitBtn');
+    consultForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      if (GOOGLE_SCRIPT_URL.indexOf('PASTE_YOUR') === 0) {
+        statusEl.textContent = 'Form not connected yet — add your Google Apps Script URL.';
+        statusEl.className = 'form-status is-error';
+        return;
+      }
+      submitBtn.disabled = true;
+      statusEl.textContent = 'Sending...';
+      statusEl.className = 'form-status';
+      var formData = new FormData(consultForm);
+      fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+      }).then(function(){
+        statusEl.textContent = "Thanks! We'll be in touch within 1–2 business days.";
+        statusEl.className = 'form-status is-success';
+        consultForm.reset();
+        submitBtn.disabled = false;
+      }).catch(function(){
+        statusEl.textContent = 'Something went wrong. Please try again or message us on Facebook.';
+        statusEl.className = 'form-status is-error';
+        submitBtn.disabled = false;
+      });
+    });
+  }
+
+})();
+</script>
+</body>
+</html>
